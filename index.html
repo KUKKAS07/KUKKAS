@@ -13,7 +13,9 @@
         }
         .banner {
             width: 100%;
+            height: auto;
             max-height: 300px;
+            object-fit: cover;
             border-bottom: 4px solid #ff00ff;
         }
         .profile-pic {
@@ -23,16 +25,20 @@
             margin-top: -75px;
             border: 4px solid #00ffff;
         }
-        .social-links a {
-            color: #00ffff;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 22px;
-            font-weight: bold;
-            transition: color 0.3s;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
         }
-        .social-links a:hover {
-            color: #ff00ff;
+        .social-item img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .social-item img:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px #ff00ff);
         }
         .container {
             display: flex;
@@ -47,6 +53,35 @@
             width: 80%;
             max-width: 600px;
             box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
+            margin-bottom: 20px;
+        }
+        .ranking-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .game-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            height: 380px;
+            box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .game-box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .game-title {
+            font-weight: bold;
+            color: #00ffff;
         }
     </style>
 </head>
@@ -58,11 +93,48 @@
         <div class="content-box">
             <p>🎮 Streaming, gaming y mucho más. Únete a la comunidad y sé parte de la acción. 🚀</p>
         </div>
+        <div class="content-box">
+            <h2>Sobre Mí</h2>
+            <p>👋 ¡Hola! Soy Kukas, tengo 20 años y estudio periodismo. Me encanta jugar League of Legends, Valorant y FIFA.</p>
+        </div>
+        <div class="ranking-section">
+            <div class="game-box">
+                <img src="LOL.png" alt="Rango LOL">
+                <div class="game-title">League of Legends</div>
+                <p>Oro IV</p>
+            </div>
+            <div class="game-box">
+                <img src="VALORANT.png" alt="Rango Valorant">
+                <div class="game-title">Valorant</div>
+                <p>Plata II</p>
+            </div>
+            <div class="game-box">
+                <img src="FIFA.png" alt="Rango FIFA">
+                <div class="game-title">FC 25</div>
+                <p>División 5</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <h2>Horario de Streams</h2>
+            <p>🗓 Hago streams los fines de semana de 6 PM a 8 PM. ¡Únete y disfruta del contenido en vivo!</p>
+        </div>
     </div>
     <div class="social-links">
-        <a href="https://twitch.tv/KUKKAS" target="_blank">Twitch</a>
-        <a href="https://x.com/Kukas07" target="_blank">Twitter</a>
-        <a href="https://www.youtube.com/@KUKKAS7" target="_blank">YouTube</a>
+        <div class="social-item">
+            <a href="https://twitch.tv/KUKKAS" target="_blank">
+                <img src="twitch-icon.png" alt="Twitch">
+            </a>
+        </div>
+        <div class="social-item">
+            <a href="https://x.com/Kukas07" target="_blank">
+                <img src="x-icon.png" alt="Twitter">
+            </a>
+        </div>
+        <div class="social-item">
+            <a href="https://www.youtube.com/@KUKKAS7" target="_blank">
+                <img src="youtube-icon.png" alt="YouTube">
+            </a>
+        </div>
     </div>
 </body>
 </html>
