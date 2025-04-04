@@ -1,140 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUKKAS - Streaming & Gaming</title>
-    <style>
-        body {
-            background-color: #0d0d0d;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .banner {
-            width: 100%;
-            height: auto;
-            max-height: 300px;
-            object-fit: cover;
-            border-bottom: 4px solid #ff00ff;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: -75px;
-            border: 4px solid #00ffff;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 30px 0;
-        }
-        .social-item img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s, filter 0.3s;
-        }
-        .social-item img:hover {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 10px #ff00ff);
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .content-box {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
-            margin-bottom: 20px;
-        }
-        .ranking-section {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
-        }
-        .game-box {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            width: 220px;
-            height: 380px;
-            box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .game-box img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .game-title {
-            font-weight: bold;
-            color: #00ffff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUKKAS - Streaming & Gaming</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-bottom: 4px solid #ff00ff;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-top: -60px;
+      border: 4px solid #00ffff;
+    }
+
+    h1 {
+      margin-top: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px;
+    }
+
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
+      margin: 20px 0;
+    }
+
+    .ranking-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .game-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .game-box img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      font-weight: bold;
+      color: #00ffff;
+      margin-top: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .social-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-item img {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .social-item img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 10px #ff00ff);
+    }
+
+    @media (max-width: 600px) {
+      .game-box {
+        width: 90%;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+      }
+
+      .banner {
+        max-height: 180px;
+      }
+
+      .social-item img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <img class="banner" src="banner.png" alt="Banner de KUKKAS">
-    <img class="profile-pic" src="profile.png" alt="Foto de perfil de KUKKAS">
-    <h1>Bienvenidos a KUKKAS</h1>
-    <div class="container">
-        <div class="content-box">
-            <p>🎮 Streaming, gaming y mucho más. Únete a la comunidad y sé parte de la acción. 🚀</p>
-        </div>
-        <div class="content-box">
-            <h2>Sobre Mí</h2>
-            <p>👋 ¡Hola! Soy Kukas, tengo 20 años y estudio periodismo. Me encanta jugar League of Legends, Valorant y FIFA.</p>
-        </div>
-        <div class="ranking-section">
-            <div class="game-box">
-                <img src="LOL.png" alt="Rango LOL">
-                <div class="game-title">League of Legends</div>
-                <p>Oro IV</p>
-            </div>
-            <div class="game-box">
-                <img src="VALORANT.png" alt="Rango Valorant">
-                <div class="game-title">Valorant</div>
-                <p>Plata II</p>
-            </div>
-            <div class="game-box">
-                <img src="FIFA.png" alt="Rango FIFA">
-                <div class="game-title">FC 25</div>
-                <p>División 5</p>
-            </div>
-        </div>
-        <div class="content-box">
-            <h2>Horario de Streams</h2>
-            <p>🗓 Hago streams los fines de semana de 6 PM a 8 PM. ¡Únete y disfruta del contenido en vivo!</p>
-        </div>
+  <img class="banner" src="banner.png" alt="Banner de KUKKAS">
+  <img class="profile-pic" src="profile.png" alt="Foto de perfil de KUKKAS">
+  <h1>Bienvenidos a KUKKAS</h1>
+
+  <div class="container">
+    <div class="content-box">
+      <p>🎮 Streaming, gaming y mucho más. Únete a la comunidad y sé parte de la acción. 🚀</p>
     </div>
-    <div class="social-links">
-        <div class="social-item">
-            <a href="https://twitch.tv/KUKKAS" target="_blank">
-                <img src="twitch-icon.png" alt="Twitch">
-            </a>
-        </div>
-        <div class="social-item">
-            <a href="https://x.com/Kukas07" target="_blank">
-                <img src="x-icon.png" alt="Twitter">
-            </a>
-        </div>
-        <div class="social-item">
-            <a href="https://www.youtube.com/@KUKKAS7" target="_blank">
-                <img src="youtube-icon.png" alt="YouTube">
-            </a>
-        </div>
+
+    <div class="content-box">
+      <h2>Sobre Mí</h2>
+      <p>👋 ¡Hola! Soy Kukas, tengo 20 años y estudio periodismo. Me encanta jugar League of Legends, Valorant y FIFA.</p>
     </div>
+
+    <div class="ranking-section">
+      <div class="game-box">
+        <img src="LOL.png" alt="Rango LOL">
+        <div class="game-title">League of Legends</div>
+        <p>Oro IV</p>
+      </div>
+      <div class="game-box">
+        <img src="VALORANT.png" alt="Rango Valorant">
+        <div class="game-title">Valorant</div>
+        <p>Plata II</p>
+      </div>
+      <div class="game-box">
+        <img src="FIFA.png" alt="Rango FIFA">
+        <div class="game-title">FIFA</div>
+        <p>División 5</p>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <h2>Horario de Streams</h2>
+      <p>🗓 Hago streams los fines de semana de 6 PM a 8 PM. ¡Únete y disfruta del contenido en vivo!</p>
+    </div>
+  </div>
+
+  <div class="social-links">
+    <div class="social-item">
+      <a href="https://twitch.tv/KUKKAS" target="_blank">
+        <img src="twitch-icon.png" alt="Twitch">
+        <small>Twitch</small>
+      </a>
+    </div>
+    <div class="social-item">
+      <a href="https://x.com/Kukas07" target="_blank">
+        <img src="x-icon.png" alt="X/Twitter">
+        <small>X</small>
+      </a>
+    </div>
+    <div class="social-item">
+      <a href="https://www.youtube.com/@KUKKAS7" target="_blank">
+        <img src="youtube-icon.png" alt="YouTube">
+        <small>YouTube</small>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
+
